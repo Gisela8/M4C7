@@ -421,7 +421,7 @@ Esto puede hacer que el código sea más legible y fácil de entender cuando se 
 El operador ternario es una alternativa al condicional if/else de una forma mucho más compacta y breve, que en muchos casos resulta más legible. 
 
 La sintaxis de un operador ternario es la siguiente:
-        JS
+        
         condición ? valor verdadero : valor falso;
 
 
@@ -494,13 +494,15 @@ Son múltiples operadores ternarios anidados uno dentro de otro. El "valor fal
 
 ## ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
 
-Las declaraciones de funciones están elevadas, lo que significa que se pueden utilizar antes de declarar la función. Se inicializan en tiempo de compilación mientras no se genera una expresión de función, solo se pueden llamar después de que el intérprete declara y lee la función.
+Las declaraciones de funciones están elevadas, lo que significa que se pueden utilizar antes de declarar la función. 
+Se inicializan en tiempo de compilación mientras no se genera una expresión de función, solo se pueden llamar después de que el intérprete declara y lee la función.
 
 JavaScript al ser un lenguaje dinámico tiene ciertos mecanismos para garantizar que la ejecución de nuestro código sea la más óptima y correcta.
 
-En JavaScript tenemos dos maneras principales de definir funciones, como una declaración o como una expresión.
+En JavaScript se tiene dos maneras principales de definir funciones, como una declaración o como una expresión.
 
-        // declaraciones de función // Función con nombre function suma1(a, b) { return a + b } // ======================== 
+        // declaraciones de función // Función con nombre function suma1(a, b) { return a + b } // 
+        
         // expresiones de función // Función anónima var suma2 = function(a, b) { return a + b } 
         // Función con nombre var suma2 = function suma2(a, b) { return a + b } 
         // Función de flecha (anónima por defecto) var suma2 = (a, b) => { return a + b }
@@ -510,8 +512,6 @@ En JavaScript tenemos dos maneras principales de definir funciones, como una dec
         function suma1(a, b) {
           return a + b
         }
-
-        // ========================
 
         // expresiones de función
 
@@ -529,9 +529,10 @@ En JavaScript tenemos dos maneras principales de definir funciones, como una dec
         var suma2 = (a, b) => {
           return a + b
         }
+        
 **Las diferencias de sintaxis** 
-son claras, las expresiones de funciones principalmente están a la DERECHA del símbolo igual, y las declaraciones NO lo tienen. 
-Se puedee llamar a una declaración de función antes de la declaración en sí y con las expresiones no. Veamos por qué esto es posible.
+son claras, las expresiones de funciones principalmente están a la DERECHA del símbolo igual, y las declaraciones NO. 
+Se puedee llamar a una declaración de función antes de la declaración en sí y con las expresiones no. 
 
 **Hoisting**
 Cuando el código JavaScript se ejecuta, el intérprete mueve todas las declaraciones del programa al inicio. 
@@ -550,7 +551,7 @@ Ejemplo:
         
 Declaraciones de variables, como asignaciones de valores; y ambas cosas pasan en momentos separados.
 El intérprete de JavaScript lo que realmente hace es declarar todas las variables y funciones primero antes de asignar y ejecutar cualquier otro valor. 
-Si se quisie ver el orden real en el que se va ejecutando cada cosa, sería algo así:
+Si se quisiese ver el orden real en el que se va ejecutando cada cosa, sería algo así:
 
         // declaraciones primero var nombre; var apellido; function nombreCompleto(primero, segundo) { return `${primero} ${segundo}` } 
         var pintarEdad; // asignaciones después nombre = "Rick" apellido = "Sanchez" pintarEdad = function(numero) { console.log(`la edad es de ${numero} años`)
@@ -575,10 +576,6 @@ A este "reorden" se le llama Hoisting. La declaración y la inicialización de
 • Las declaraciones de funciones pueden ser ejecutadas antes de su definición.
 • Declaraciones a la derecha, expresiones a la izquierda.
 • Las expresiones son más difíciles de inspeccionar.
-
-Las declaraciones de funciones pueden ser ejecutadas antes de su definición
-
-Gracias a que las declaraciones de funciones son ascendidas al momento de ejecución del programa, la función se puede ejecutar incluso antes de su definición.
 
         nuevaFuncion() function nuevaFuncion() { console.log("Hola Mundo!") } // Hola Mundo!
         nuevaFuncion()
@@ -631,9 +628,10 @@ En este último caso, la función pasa a ser una función anónima, algo conveni
 
 ## ¿Qué es la palabra clave "this" en JS?
 
-Una de las formas más comunes en las que se utiliza la palabra clave this en JavaScript es en las clases. Propiedades de una clase. En vez de utilizar el nombre del objeto, se utiliza this. Esto es muy útil cuando queremos cambiar el nombre del objeto o este no tiene un nombre específico.
+Una de las formas más comunes en las que se utiliza la palabra clave this en JavaScript es en las clases. 
+Propiedades de una clase. En vez de utilizar el nombre del objeto, se utiliza this. Esto es muy útil cuando se quiere  cambiar el nombre del objeto o este no tiene un nombre específico.
 
-A continuación, se pone un ejemplo con dos formas de utilizar la palabra clave this en JavaScript. 
+Ejemplo con dos formas de utilizar la palabra clave this en JavaScript. 
 
         Array.prototype.shuffle = function ( ) => {
 
