@@ -119,13 +119,16 @@ En JavaScript, hay 3 tipos de comillas.
 
 Las comillas dobles y simples son comillas “sencillas” (funcionan igual).
 
-Los backticks son comillas de “funcionalidad extendida”. Nos permiten incrustar variables y expresiones en una cadena de caracteres encerrándolas en ${...}, por ejemplo:
+Los backticks son comillas de “funcionalidad extendida”. 
+Nos permiten incrustar variables y expresiones en una cadena de caracteres encerrándolas en ${...}
+
+Ejemplo:
 
     let name = "John";
     // incrustar una variable
     alert( `Hola, ${name}!` ); // Hola, John!
-   // incrustar una expresión
-   alert( `el resultado es ${1 + 2}` ); //el resultado es 3 ``
+       // incrustar una expresión
+       alert( `el resultado es ${1 + 2}` ); //el resultado es 3 ``
 
 La expresión dentro de ${...} se evalúa y el resultado pasa a formar parte de la cadena. 
 Se puede poner cualquier cosa ahí dentro: una variable como name, una expresión aritmética como 1 + 2, o algo más complejo. Esto sólo se puede hacer con los backticks. 
@@ -136,7 +139,7 @@ Se puede poner cualquier cosa ahí dentro: una variable como name, una expresi�
 ### Boolean (tipo lógico)
 
 El tipo boolean tiene sólo dos valores posibles: true y false.
-Este tipo se utiliza comúnmente para almacenar valores de sí/no: true significa “sí, correcto, verdadero”, y false significa “no, incorrecto, falso”.
+Este tipo se utiliza comúnmente para almacenar valores de sí/no
 
 Por ejemplo:
 
@@ -177,9 +180,9 @@ Técnicamente, es posible asignar undefined a cualquier variable:
 
 
     let age = 100;
-   // cambiando el valor a undefined
-   age = undefined; 
-   alert(age); // "undefined"``
+       // cambiando el valor a undefined
+       age = undefined; 
+       alert(age); // "undefined"``
 
 
 ### Object y Symbol
@@ -224,14 +227,14 @@ La propiedad length devuelve la longitud de la cadena.
 
 
 ### toUpperCase()
-El método toUpperCase convierte cada carácter de la cadena a mayúsculas y lo devuelve. No cambia la cadena original.
+El método toUpperCase convierte cada carácter de la cadena a mayúsculas. No cambia la cadena original.
 
     const empresa = "GeekFlare";
     const empresaMayúsculas = empresa.toUpperCase();
     console.log(empresaMayúsculas);''
 
 ### toLowerCase()
-El método toLowerCase convierte cada carácter de la cadena a minúscula y lo devuelve. No cambia la cadena original.
+El método toLowerCase convierte cada carácter de la cadena a minúscula. No cambia la cadena original.
 
     const empresa = "GeEkFlaRe";
     const minúsculasEmpresa = empresa.aMinúsculas();
@@ -291,6 +294,7 @@ El código string.sl ice(-5) devolverá Flare para el ejemplo anterior.
 
 ### El método substr(inicioIndice, longitud) 
 Es similar al método slice. La única diferencia es que el método substr acepta la longitud de la subcadena que debe extraerse de la cadena original.
+
         const empresa = "GeekFlare";
         console.log(empresa.substr(4, 5));
 
@@ -468,7 +472,9 @@ Utilizando un operador ternario:
 
 **Operador ternario anidado**
 
-Cuando se trata de if muy pequeños. Si intentasemos realizar una comprobación de if múltiples con el operador ternario, la sintaxis puede resultar compleja y difícil de leer. Observa el siguiente ejemplo con múltiples if / else:
+Cuando se trata de if muy pequeños. Si intentasemos realizar una comprobación de if múltiples con el operador ternario, la sintaxis puede resultar compleja y difícil de leer. 
+
+El siguiente ejemplo con múltiples if / else:
 
         let nota = 7;
         console.log("He realizado mi examen.");
@@ -514,7 +520,7 @@ Son múltiples operadores ternarios anidados uno dentro de otro. El "valor fal
 Las declaraciones de funciones están elevadas, lo que significa que se pueden utilizar antes de declarar la función. 
 Se inicializan en tiempo de compilación mientras no se genera una expresión de función, solo se pueden llamar después de que el intérprete declara y lee la función.
 
-JavaScript al ser un lenguaje dinámico tiene ciertos mecanismos para garantizar que la ejecución de nuestro código sea la más óptima y correcta.
+JavaScript al ser un lenguaje dinámico tiene ciertos mecanismos para garantizar que la ejecución del código sea la más óptima y correcta.
 
 En JavaScript se tiene dos maneras principales de definir funciones, como una declaración o como una expresión.
 
@@ -551,7 +557,6 @@ En JavaScript se tiene dos maneras principales de definir funciones, como una de
 son claras, las expresiones de funciones principalmente están a la DERECHA del símbolo igual, y las declaraciones NO. 
 Se puedee llamar a una declaración de función antes de la declaración en sí y con las expresiones no. 
 
-**Hoisting**
 Cuando el código JavaScript se ejecuta, el intérprete mueve todas las declaraciones del programa al inicio. 
 
 Ejemplo:
@@ -567,7 +572,7 @@ Ejemplo:
           console.log(`la edad es de ${numero} años`)
         }
         
-Declaraciones de variables, como asignaciones de valores; y ambas cosas pasan en momentos separados.
+Declaraciones de variables, como asignaciones de valores  ambas cosas pasan en momentos separados.
 El intérprete de JavaScript lo que realmente hace es declarar todas las variables y funciones primero antes de asignar y ejecutar cualquier otro valor. 
 Si se quisiese ver el orden real en el que se va ejecutando cada cosa, sería algo así:
 
@@ -587,7 +592,8 @@ Si se quisiese ver el orden real en el que se va ejecutando cada cosa, sería al
         pintarEdad = function(numero) {
             console.log(`la edad es de ${numero} años`)
 
-A este "reorden" se le llama Hoisting. La declaración y la inicialización de una variable o función ocurren en momentos distintos, incluso cuando los escribes en la misma línea.
+A este "reorden" se le llama **Hoisting**. La declaración y la inicialización de una variable o función ocurren en momentos distintos, incluso cuando se escriben en la misma línea.
+
 
 **Diferencias**
 
@@ -614,6 +620,7 @@ En cambio, esto no es posible con las expresiones de funciones, ya que no se sab
         }
 
         //  TypeError: nuevaFuncion is not a function
+        
         
 **Declaraciones a la Izquierda, Expresiones a la Derecha**
 
