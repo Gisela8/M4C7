@@ -1,25 +1,36 @@
 # M4C7
-Checkpoint_7
+
+## Checkpoint_7
+
 ## ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
+
 **Compilado vs interpretado**
-Una de las principales diferencias entre JavaScript y otros lenguajes de programación es cómo se ejecutan. La mayoría de los lenguajes de programación son compilados, lo que significa que el código debe compilarse en código de máquina antes de poder ejecutarse. 
-Por otro lado, JavaScript es un lenguaje interpretado, lo que significa que no es necesario compilarlo antes de poder ejecutarlo. Esto hace que sea más fácil trabajar con JavaScript, ya que se no tiene que esperar a que se compile su código antes de poder probarlo.
+Una de las principales diferencias entre JavaScript y otros lenguajes de programación es cómo se ejecutan. 
+La mayoría de los lenguajes de programación son compilados, lo que significa que el código debe compilarse en código de máquina antes de poder ejecutarse. 
+JavaScript es un lenguaje interpretado, lo que significa que no es necesario compilarlo antes de poder ejecutarlo. 
+Esto hace que sea más fácil trabajar con JavaScript, ya que se no tiene que esperar a que se compile su código antes de poder probarlo.
 
 **Del lado del cliente frente al lado del servidor**
-Otra diferencia clave entre JavaScript y otros lenguajes de programación es dónde se ejecutan. Como se mencionó anteriormente, JavaScript está diseñado para ejecutarse en navegadores web y, por lo tanto, es un lenguaje de programación del lado del cliente. Esto significa que el código escrito en JavaScript se ejecutará en la computadora del usuario en lugar de en el servidor. Por otro lado, otros lenguajes de programación suelen ejecutarse en el lado del servidor, lo que significa que deben enviarse desde el servidor a la computadora del usuario antes de poder ejecutarse.
+Otra diferencia clave entre JavaScript y otros lenguajes de programación es dónde se ejecutan. JavaScript está diseñado para ejecutarse en navegadores web y, 
+por lo tanto, es un lenguaje de programación del lado del cliente. Esto significa que el código escrito en JavaScript se ejecutará en la computadora del usuario en lugar de en el servidor.
+Por otro lado, otros lenguajes de programación suelen ejecutarse en el lado del servidor, lo que significa que deben enviarse desde el servidor a la computadora del usuario antes de poder ejecutarse.
 
 **Orientado a objetos versus procesal**
-JavaScript es un lenguaje de programación orientado a objetos. Esto significa que el código escrito en JavaScript se compone de objetos que contienen datos y funciones. Estos objetos se pueden manipular y utilizar para crear programas complejos. Por otro lado, muchos otros lenguajes de programación son procedimentales, lo que significa que el código escrito en estos lenguajes consta de una serie de instrucciones que deben seguirse en orden.
+JavaScript es un lenguaje de programación orientado a objetos. Esto significa que el código escrito en JavaScript se compone de objetos que contienen datos y funciones. 
+Estos objetos se pueden manipular y utilizar para crear programas complejos. 
+Por otro lado, muchos otros lenguajes de programación son procedimentales, lo que significa que el código escrito en estos lenguajes consta de una serie de instrucciones que deben seguirse en orden.
 
 
 **Escritura dinámica versus estática**
-Otra diferencia clave entre JavaScript y otros lenguajes de programación es cómo manejan los tipos de datos. JavaScript es un lenguaje dinámico, lo que significa que las variables no necesitan declararse con un tipo específico. Esto facilita el trabajo con datos ya no se tiene que especificar su tipo al declarar variables. Otros lenguajes de programación suelen tener tipos estáticos, lo que significa que las variables deben declararse con un tipo específico antes de poder usarse.
+Otra diferencia clave entre JavaScript y otros lenguajes de programación es cómo manejan los tipos de datos. JavaScript es un lenguaje dinámico, lo que significa que las variables no necesitan declararse con un tipo específico. 
+Esto facilita el trabajo con datos ya no se tiene que especificar su tipo al declarar variables. 
+Otros lenguajes de programación suelen tener tipos estáticos, lo que significa que las variables deben declararse con un tipo específico antes de poder usarse.
 
 ##  ¿Cuáles son algunos tipos de datos JS?
 
 **Tipos de datos**
 Un valor en JavaScript siempre pertenece a un tipo de dato determinado. Por ejemplo, un string o un número.
-Podemos almacenar un valor de cualquier tipo dentro de una variable. 
+Se puede almacenar un valor de cualquier tipo dentro de una variable. 
 Por ejemplo, una variable puede contener en un momento un string y luego almacenar un número:
 
     //no hay error
@@ -74,7 +85,7 @@ Por lo tanto, si hay un NaN en alguna parte de una expresión matemática, se 
 
 En JavaScript, el tipo “number” no puede representar de forma segura valores enteros mayores que (2^53-1) (eso es 9007199254740991), o menor que -(2^53-1) para negativos.
 
-Para ser realmente precisos, el tipo de dato “number” puede almacenar enteros muy grandes (hasta 1.7976931348623157 * 10308), pero fuera del rango de enteros seguros ±(253-1) habrá un error de precisión, porque no todos los dígitos caben en el almacén fijo de 64-bit. Así que es posible que se almacene un valor “aproximado”.
+Para ser realmente precisos, el tipo de dato “number” puede almacenar enteros muy grandes (hasta 1.7976931348623157 * 10308), pero fuera del rango de enteros seguros ±(2^53-1) habrá un error de precisión, porque no todos los dígitos caben en el almacén fijo de 64-bit. Así que es posible que se almacene un valor “aproximado”.
 
 Por ejemplo, estos dos números (justo por encima del rango seguro) son iguales:
 
@@ -83,7 +94,7 @@ Por ejemplo, estos dos números (justo por encima del rango seguro) son iguales:
     // 9007199254740992
 
 Se puede decir que ningún entero impar mayor que (2^53-1) puede almacenarse en el tipo de dato “number”.
-Para la mayoría de los propósitos, el rango ±(2^53-1) es suficiente, pero a veces necesitamos números realmente grandes; por ejemplo, para criptografía o marcas de tiempo de precisión de microsegundos.
+Para la mayoría de los propósitos, el rango ±(2^53-1) es suficiente, pero a veces se necesitan números realmente grandes; por ejemplo, para criptografía o marcas de tiempo de precisión de microsegundos.
 
 BigInt se agregó recientemente al lenguaje para representar enteros de longitud arbitraria.
 
@@ -94,7 +105,7 @@ Un valor BigInt se crea agregando n al final de un entero:
 
 ### String
 
-Un string en JavaScript es una cadena de caracteres y debe colocarse entre comillas.
+Una  string en JavaScript es una cadena de caracteres y debe colocarse entre comillas.
 
     let str = "Hola";
     let str2 = 'Las comillas simples también están bien';
@@ -117,7 +128,7 @@ Los backticks son comillas de “funcionalidad extendida”. Nos permiten incrus
    alert( `el resultado es ${1 + 2}` ); //el resultado es 3 ``
 
 La expresión dentro de ${...} se evalúa y el resultado pasa a formar parte de la cadena. 
-Se puede poner cualquier cosa ahí dentro: una variable como name, una expresión aritmética como 1 + 2, o algo más complejo.Esto sólo se puede hacer con los backticks. 
+Se puede poner cualquier cosa ahí dentro: una variable como name, una expresión aritmética como 1 + 2, o algo más complejo. Esto sólo se puede hacer con los backticks. 
 
     alert( "el resultado es ${1 + 2}" ); 
     // el resultado es ${1 + 2} (las comillas dobles no hacen nada) ``
@@ -154,9 +165,7 @@ El código anterior indica que el valor de age es desconocido o está vacío p
 ### El valor “undefined” (indefinido)
 
 El valor especial undefined también se distingue. Hace un tipo propio, igual que null.
-
 El significado de undefined es “valor no asignado”.
-
 Si una variable es declarada, pero no asignada, entonces su valor es undefined:
 
 
@@ -179,11 +188,11 @@ El tipo object (objeto) es especial.
 
 Todos los demás tipos se llaman “primitivos” porque sus valores pueden contener una sola cosa (ya sea una cadena, un número, o lo que sea). 
 
-Por el contrario, los objetos se utilizan para almacenar colecciones de datos y entidades más complejas.El tipo symbol (símbolo) se utiliza para crear identificadores únicos para los objetos. 
+Los objetos se utilizan para almacenar colecciones de datos y entidades más complejas. El tipo symbol se utiliza para crear identificadores únicos para los objetos. 
 
 ### El operador typeof
 El operador typeof devuelve el tipo de dato del operando. 
-Es útil cuando queremos procesar valores de diferentes tipos de forma diferente o simplemente queremos hacer una comprobación rápida.
+Es útil cuando se quiere procesar valores de diferentes tipos de forma diferente o simplemente se quiere hacer una comprobación rápida.
 
 La llamada a typeof x devuelve una cadena con el nombre del tipo:
 
@@ -211,7 +220,7 @@ Son del tipo usado en agrupamiento matemático. Usualmente, tales paréntesis co
 ### longitud
 La propiedad length devuelve la longitud de la cadena.
 
-'const empresa = "GeekFlare";console.log(empresa.longitud);'
+    const empresa = "GeekFlare";console.log(empresa.longitud);
 
 
 ### toUpperCase()
@@ -264,7 +273,7 @@ El método slice también aceptará un único argumento. Si pasa un único arg
         console.log(empresa.slice(4));
 
 El método slice también aceptará índices negativos. Los índices negativos se cuentan desde el final de la cadena. 
-Un ejemplo, ya que es nuevo para la mayoría de la gente. Dada la cadena GeekFlare, los índices negativos son
+Dada la cadena GeekFlare, los índices negativos son
 
         G = -9, e = -8, e = -7, k = -6 y así sucesivamente…
         
