@@ -363,7 +363,11 @@ En JavaScript, hay ciertos tipos de datos que se consideran automáticamente com
 9. {} - El objeto vacío.
     
 ### 2. Declaración Else
-En JavaScript, la declaración else se utiliza en conjunto con una declaración if. La declaración else se ejecuta únicamente si la condición evaluada por la declaración if resulta ser falsa. En otras palabras, cuando la instrucción dentro del if no se ejecuta debido a que la condición es falsa, entonces la instrucción dentro del bloque else es la que se ejecuta. Esto proporciona una bifurcación en la lógica del programa, permitiendo definir acciones alternativas cuando la condición inicial no se cumple.
+En JavaScript, la declaración else se utiliza en conjunto con una declaración if. La declaración else se ejecuta únicamente si la condición evaluada por la declaración if resulta ser falsa. 
+Cuando la instrucción dentro del if no se ejecuta debido a que la condición es falsa, entonces la instrucción dentro del bloque else es la que se ejecuta. 
+Esto proporciona una bifurcación en la lógica del programa, permitiendo definir acciones alternativas cuando la condición inicial no se cumple.
+
+
         const n = parseInt(prompt("choose number"));
         if(n % 2 == 0){
           console.log("The number is even");
@@ -372,9 +376,12 @@ En JavaScript, la declaración else se utiliza en conjunto con una declaració
         }
         
 ### 3. Declaración Else if
-En JavaScript, la declaración else if se emplea para especificar condiciones adicionales dentro de la estructura de un bloque if. Si la primera condición en el bloque if resulta ser falsa, el programa procederá a verificar la siguiente condición dentro de else if.
+En JavaScript, la declaración else if se emplea para especificar condiciones adicionales dentro de la estructura de un bloque if. 
+Si la primera condición en el bloque if resulta ser falsa, el programa procederá a verificar la siguiente condición dentro de else if.
 
-La declaración else if es útil para añadir casuísticas adicionales a la evaluación, permitiendo así gestionar múltiples condiciones de manera organizada. Es importante destacar que es posible anidar varias declaraciones else if según la necesidad y criterio. Esto proporciona flexibilidad en la lógica del programa al permitir manejar diferentes escenarios en función de las condiciones evaluadas.
+La declaración else if es útil para añadir casuísticas adicionales a la evaluación, permitiendo así gestionar múltiples condiciones de manera organizada. 
+Es importante destacar que es posible anidar varias declaraciones else if según la necesidad y criterio. 
+Esto proporciona flexibilidad en la lógica del programa al permitir manejar diferentes escenarios en función de las condiciones evaluadas.
 
         const aliceAge = parseInt(prompt("choose number"));
         if (aliceAge < 18) {
@@ -389,7 +396,8 @@ La declaración else if es útil para añadir casuísticas adicionales a la ev
 A diferencia de las declaraciones previamente mencionadas, la estructura switch se enfoca en realizar comparaciones precisas de casos. 
 En un bloque switch, se evalúa un valor contra diferentes casos hasta encontrar una coincidencia.
 En lugar de utilizar expresiones booleanas como en if o else if, switch compara directamente el valor proporcionado con los casos definidos. 
-Esto puede hacer que el código sea más legible y fácil de entender cuando se necesita comprobar una variable contra múltiples valores específicos. Además, switch permite ejecutar diferentes bloques de código según el caso coincidente, proporcionando una forma alternativa y estructurada de gestionar múltiples condiciones.
+Esto puede hacer que el código sea más legible y fácil de entender cuando se necesita comprobar una variable contra múltiples valores específicos. 
+Switch permite ejecutar diferentes bloques de código según el caso coincidente, proporcionando una forma alternativa y estructurada de gestionar múltiples condiciones.
 
         const currentDay = new Date().getDay();
         let day;
