@@ -555,6 +555,7 @@ Se puedee llamar a una declaración de función antes de la declaración en sí 
 Cuando el código JavaScript se ejecuta, el intérprete mueve todas las declaraciones del programa al inicio. 
 
 Ejemplo:
+
         var nombre = "Rick" var apellido = "Sanchez" function nombreCompleto(primero, segundo) { return `${primero} ${segundo}` } 
         var pintarEdad = function (numero) { console.log(`la edad es de ${numero} años`) }
         var nombre = "Rick"
